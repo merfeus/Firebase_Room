@@ -1,10 +1,13 @@
 package com.example.firebase_room.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.firebase_room.MainActivity
+import com.example.firebase_room.ProductsAndCategoryActivity
 import com.example.firebase_room.R
 import com.example.firebase_room.databinding.MainFragmentBinding
 import com.example.firebase_room.utils.replaceFragment
@@ -18,7 +21,7 @@ class MainFragment : Fragment(R.layout.main_fragment) {
     private lateinit var viewModel: MainViewModel
 
     private val observerUser = Observer<FirebaseUser?> {
-        requireActivity().replaceFragment(CategoryCrudFragment())
+        (requireActivity() as? MainActivity)?.chengeScreen()
     }
 
     private val observerError = Observer<String> {

@@ -1,8 +1,6 @@
 package com.example.firebase_room.database.dao
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 import com.example.firebase_room.model.Category
 import java.util.*
 
@@ -14,4 +12,10 @@ interface CategoryDAO {
 
     @Insert
     fun insert(list: List<Category>)
+
+    @Delete
+    fun delete(category: Category)
+
+    @Update
+    fun update(category: Category)
 }

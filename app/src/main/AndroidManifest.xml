@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Firebase_Room">
         <activity
+            android:name=".ProductsAndCategoryActivity"
+            android:exported="true"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/Theme.Firebase_Room.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
